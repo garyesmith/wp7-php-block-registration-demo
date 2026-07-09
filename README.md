@@ -1,4 +1,4 @@
-#  Basic Block Registration
+#  WordPress 7 PHP-Only Block Registration Demo
  
 This plugin demonstrates a simple example of PHP-only registration of a block with settings that can be modified in the WP sidebar. This ability has been made available only as of WordPress v7.0. The code here is modified and extended from [examples provided by Brian Coords](https://github.com/bacoords/example-php-block).
 
