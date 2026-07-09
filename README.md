@@ -4,6 +4,16 @@ This plugin demonstrates a simple example of PHP-only registration of a block wi
 
 The block pulls between 1 and 3 posts from a specified category, then displays their titles and thumbnails, either horizontally or vertically.
 
+---
+**Block admin view screen shot:**
+
+<img alt="Screen grab of Block admin view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdq4jr62azl07u1udf7n81a" width="440">
+
+---
+
+**Block front-end render screen shot:**
+
+<img alt="Screen grab of Block front end view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdq4jvx2azs07u106a159cd" width="440">
 
 ## Installation Instructions
 
