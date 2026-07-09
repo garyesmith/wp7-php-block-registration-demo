@@ -1,0 +1,58 @@
+/**
+ * Basic Block Styles
+ *
+ * Scoped to .demoblock-simple - only loads when block is present on page.
+ */
+
+.demoblock-simple {
+	padding: 10px 0 0 0;
+	position: relative;
+}
+
+.demoblock-simple__heading {
+	color: inherit;
+	margin: 1% 0 0 1%;
+}
+
+.demoblock-simple__category {
+	color: inherit;
+	list-style-type: none;
+	float: none;
+	clear: both;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: flow-root;
+}
+.demoblock-simple__category button {
+	position: absolute;
+	top: 10%;
+	right: 1%;
+	cursor: pointer;
+}
+.demoblock-simple__category li {
+	width: 30%;
+	float: left;
+	margin: 1% 2% 1% 0;
+	display: block;
+	text-align: center;
+	padding: 5px 0 0 0;
+	border: 1px solid black;
+	border-radius: 16px;
+}
+.demoblock-simple__category.vertical li {
+	float: none;
+	clear: both;
+	margin-top: 2%;
+}
+.demoblock-simple__category li img {
+	width: auto;
+	height: 5vw;
+	margin: 0 auto;
+	display: block;
+}
+
+/* When background color is set via block supports, adjust the gradient */
+/* .demoblock-simple[style*="background-color"] {
+	background: none;
+} */
