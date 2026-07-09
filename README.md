@@ -1,19 +1,16 @@
 #  WordPress 7 PHP-Only Block Registration Demo
  
-This plugin demonstrates a simple example of PHP-only registration of a block with settings that can be modified in the WP sidebar. This ability has been made available only as of WordPress v7.0. The code here is modified and extended from [examples provided by Brian Coords](https://github.com/bacoords/example-php-block).
+This plugin demonstrates a simple example of *PHP-Only Block Registration* with settings that can be modified in the WP sidebar. This ability has been made available only as of WordPress v7.0. The code here is modified and extended from [examples provided by Brian Coords](https://github.com/bacoords/example-php-block).
 
-The block pulls between 1 and 3 posts from a specified category, then displays their titles and thumbnails, either horizontally or vertically.
+The demo is a simple category posts block that retrieves some posts from a specified category, then displays their titles and thumbnails horizontally or vertically.
 
----
-**Block admin view screen shot:**
+**Sample Block Admin**
 
-<img alt="Screen grab of Block admin view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdq4jr62azl07u1udf7n81a" width="500">
+<img alt="Screen grab of Block admin view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdq4jr62azl07u1udf7n81a?1" width="500">
 
----
+**Sample Block Front-End**
 
-**Block front-end render screen shot:**
-
-<img alt="Screen grab of Block front end view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdq4jvx2azs07u106a159cd" width="500">
+<img alt="Screen grab of Block front end view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdq4jvx2azs07u106a159cd?1" width="500">
 
 ## Installation Instructions
 
@@ -49,6 +46,27 @@ The block code is contained in the subfolder `simple-block-demo` which contains 
 
 - `style.css` - CSS to style the block on the front and back-end.
 
-- `view.js` - JS that runs on the front-end after the DOM and blocks have loaded, and then injects a button that enables the display direction of the posts in the block to be changed on-the-fly by adding or removing a class to the block element.
+- `view.js` - JaveScript that runs on the front-end after the DOM and blocks have loaded, and then injects a button that enables the display direction of the posts in the block to be changed on-the-fly by adding or removing a class to the block element. **Important note:** This JavaScript will only execute when the block is viewed on the front-end of the website; it will not execute within the WordPress admin panel content editing area.
 
 Inline code comments provide further details.
+
+
+## What is PHP-Only Block Registration?
+
+Until the release of WordPress 7.0 in early 2026, the creation of all custom WordPress blocks (formerly known as Gutenberg blocks) required working with a Javascript build environment that including NodeJS, npm, React, and other related build tools. Since the rest of WordPress is built and customized via PHP, this made custom block development cumbersome, bringing along a lot of overhead even for developers who work in both stacks.
+
+[PHP-Only Block Registration](https://make.wordpress.org/core/2026/03/03/php-only-block-registration/) in WordPress 7.0 eliminates the need for this secondary stack when creating simple server-rendered blocks. Specifically, a new `autoRegister` flag in `register_block_type` instructs WordPress to automatically generates the block in the editor, along with the relevant sidebar options.
+
+## Limitations of PHP-Only Block Registration
+
+This method is designed to ease block registration for simpler blocks that do not have any of the following requirements:
+
+- The need for nested blocks, that is, the ability to drop another block into your custom block.
+
+- Sidebar attribute setting types other than `string`, `integer`, `boolean`, and `enum`.
+
+- Advanced media fields like image uploaders or rich text fields.
+
+- Extensive user interaction with a lot of JavaScript that must execute in the WordPress admin area.
+
+Even with these limitatations, this new functionality should open up new customization possibilities for more WordPress developers.
