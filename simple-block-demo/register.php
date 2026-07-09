@@ -1,9 +1,10 @@
 <?php
 /**
- * Basic Block Registration
+ * Register basic WP7 PHP Block
  *
  * Demonstrates pure PHP-only block registration of a block that displays some post titles and thumbs 
  * along which some settings that can be modified in the WP sidebar
+ * 
  */
 
 defined( 'ABSPATH' ) || exit;  // prevent direct access via browser
@@ -14,8 +15,8 @@ add_action(
 		
 		// register js for the block
 		wp_register_script(
-			'gary-simple-block-view',
-			PHPBLOCKS_URL . 'gary-simple-block/view.js',
+			'simple-block-demo-view',
+			PHPBLOCKS_URL . 'simple-block-demo/view.js',
 			array(),
 			PHPBLOCKS_VERSION,
 			array( 'in_footer' => true )
@@ -23,8 +24,8 @@ add_action(
 
 		// register stylesheet for the block
 		wp_register_style(
-			'gary-simple-block-style',
-			PHPBLOCKS_URL . 'gary-simple-block/style.css',
+			'simple-block-demo-style',
+			PHPBLOCKS_URL . 'simple-block-demo/style.css',
 			array(),
 			PHPBLOCKS_VERSION
 		);
@@ -52,25 +53,19 @@ add_action(
 		register_block_type(
 			'example-php-block/hello',
 			array(
-				'title'           => 'Gary\'s Simple Block',
+				'title'           => 'Simple PHP Block Demo',
 				'description'     => 'A simple block that outputs some post title and thumbs vertically or horizontally and allows styling.',
 				'category'        => 'widgets',
 				'icon'            => 'text', // choose an icon from https://developer.wordpress.org/resource/dashicons/
 				'version'         => PHPBLOCKS_VERSION,
 
-				'style'           => 'gary-simple-block-style', 
+				'style'           => 'simple-block-demo-style', 
 
 				'attributes'      => array(
 					'heading'      => array(
 						'type'    => 'string',
 						'default' => 'This is a heading',
 						'label'   => 'Heading Text',
-					),
-					'headingLevel' => array(
-						'type'    => 'string',
-						'enum'    => array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ),
-						'default' => 'h2',
-						'label'   => 'Heading Level',
 					),
 					'selectedCategory' => [
 						'type'    => 'string',
@@ -94,7 +89,7 @@ add_action(
 						'enumNames' => array_values( $maxnum_options ),						
 					]
 				),
-				'supports'        => array( // defines what style elements users can change inside wp
+				'supports'        => array( // defines what style elements users can change in admin sidebar
 					'autoRegister' => true,
 					'color'        => array(
 						'text'       => true,
@@ -110,7 +105,7 @@ add_action(
 					'html'         => false, // set to true if you want people to be able to edit your block HTML inside WP
 				),
 				'render_callback' => function ( $attributes ) {
-					wp_enqueue_script('gary-simple-block-view');
+					wp_enqueue_script('simple-block-demo-view');
 
 					// get the ID of the category selected in the sidebar
 					$cat_id = get_category_by_slug( $attributes['selectedCategory'] );
@@ -127,38 +122,39 @@ add_action(
 					$catListHtml='';
 					while ($cat_query->have_posts()) {
 						$cat_query->the_post();
-						$catListHtml.='<li>';
-						$catListHtml.='<a href="' .get_the_permalink() . '">' . get_the_post_thumbnail(get_the_ID(), 'small') . '</a>';
-						$catListHtml.='<h4><a href="' .get_the_permalink() . '">'.get_the_title().'</a></h4>';
-						$catListHtml.='</li>'; 
+						$catListHtml .= sprintf(
+							'<li>
+								<a href="%s">
+									%s
+									<h4>%s</h4>
+								</a>
+							</li>',
+							get_the_permalink(),
+							get_the_post_thumbnail(get_the_ID(), 'small'),
+							get_the_title()
+						);
 					}
 
 					// reset the wp query
 					wp_reset_postdata(); 
 
-					$wrapper = get_block_wrapper_attributes(
+					// generate the required classes and inline styles for a block's root element 
+					$block_wrapper = get_block_wrapper_attributes(
 						array(
 							'class' => 'demoblock-simple',
 						)
 					);
 
-					// get the heading level set, and do some validation to make sure it's valid and fall back on a default if not
-					$tag = in_array( $attributes['headingLevel'], array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ), true )
-						? $attributes['headingLevel']
-						: 'h2';
-
 					// return all HTML for the block, including the list elements created above
 					return sprintf(
 						'<div %s>
-						<%s class="demoblock-simple__heading">%s</%s>
-						<ul class="demoblock-simple__category %s">%s</ul>
-					</div>',
-						$wrapper,
-						$tag,
+							<h2 class="demoblock-simple__heading">%s</h2>
+							<ul class="demoblock-simple__category %s">%s</ul>
+						</div>',
+						$block_wrapper,
 						esc_html( $attributes['heading'] ),
-						$tag,
 						$attributes['direction'],
-						wp_kses_post($catListHtml) // sanitize generated HTML for safety using "KSES Strips Evil Scripts"
+						wp_kses_post($catListHtml) 
 					);
 				},
 			)

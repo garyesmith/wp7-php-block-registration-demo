@@ -9,16 +9,15 @@ The block pulls between 1 and 3 posts from a specified category, then displays t
 
 - Download this repo as a .ZIP file and install it as a plugin on any site running **WordPress 7.0 or newer**.
 
-- Activate the plugin *Gary's PHP Blocks Demo*.
+- Activate the plugin *WP7 PHP Block Demo*.
 
 - Publish some posts and assign them to some categories; make sure each post has a featured image.
 
-- Edit a page and add the block named *Gary's Simple Block*.
+- Edit a page and add the block named *Simple PHP Block Demo*.
 
 - With the block selected, in the right sidebar, adjust the block settings as desired:
 
   - `Heading Text` - Text to display in the heading
-  - `Heading Level` - h1 through h6
   - `Category` - Select category to pull posts from
   - `Default Direction` - Select vertical or horizontal
   - `Max Posts` - Select 1, 2, or 3 posts
@@ -32,9 +31,9 @@ The block pulls between 1 and 3 posts from a specified category, then displays t
 
 ## Code Structure Notes
 
-The file `gary-php-blocks.php` in the root defines this as a WP plugin, sets some path constants, then loads the block registration code.
+The file `php-blocks-demo.php` in the root defines this as a WP plugin, sets some path constants, then loads the block registration code.
 
-The block code is contained in the subfolder `gary-simple-block` which contains 3 files:
+The block code is contained in the subfolder `simple-block-demo` which contains 3 files:
 
 - `register.php` - Registers the block, enqueues the CSS and Javascript, defines the properties of the block including the attributes available in the settings sidebar, then renders the block HTML based on those settings.
 
