@@ -46,7 +46,7 @@ The block code is contained in the subfolder `simple-block-demo` which contains 
 
 - `style.css` - CSS to style the block on the front and back-end.
 
-- `view.js` - JaveScript that runs on the front-end after the DOM and blocks have loaded, and then injects a button that enables the display direction of the posts in the block to be changed on-the-fly by adding or removing a class to the block element. **Important note:** This JavaScript will only execute when the block is viewed on the front-end of the website; it will not execute within the WordPress admin panel content editing area.
+- `view.js` - JaveScript that runs on the front-end after the DOM and blocks have loaded, and then injects a button that enables the display direction of the posts in the block to be changed on-the-fly with a simple JavaScript sort. **Important note:** This JavaScript will only execute when the block is viewed on the front-end of the website; it will not execute within the WordPress admin panel content editing area.
 
 Inline code comments provide further details.
 
