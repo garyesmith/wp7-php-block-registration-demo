@@ -29,7 +29,7 @@ The demo is a simple category posts block that retrieves some posts from a speci
   - `Default Direction` - Select vertical or horizontal
   - `Max Posts` - Select 1, 2, or 3 posts
 
-- With the block selected, adjust any default style settings such as font sizes or background colors.
+- With the block selected, in the right sidebar, adjust any default style settings such as font sizes or background colors.
 
 - Publish the post, then view it.
 
