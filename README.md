@@ -33,7 +33,7 @@ The demo is a simple category posts block that retrieves some posts from a speci
 
 - Publish the post, then view it.
 
-- When viewing, click the *Rotate* button at the top-right of any block instance to change the display direction of the posts dynamically.
+- When viewing, click the *Reverse Order* button at the top-right of any block instance to change the display direction of the posts dynamically.
 
 
 ## Code Structure Notes
