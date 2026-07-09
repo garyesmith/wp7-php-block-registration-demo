@@ -1,20 +1,20 @@
 #  WordPress 7 PHP-Only Block Registration Demo
  
-This plugin demonstrates a simple example of *PHP-Only Block Registration* with settings that can be modified in the WP sidebar. This ability has been made available only as of WordPress v7.0. The code here is modified and extended from [examples provided by Brian Coords](https://github.com/bacoords/example-php-block).
+This plugin demonstrates a simple example of *PHP-Only Block Registration* to create a WordPress block that can be customized via settings in the WP admin sidebar. This ability to do this purely with PHP has been available only as of WordPress v7.0. The code here is modified and extended from examples provided by [Brian Coords](https://github.com/bacoords/example-php-block).
 
-The demo is a simple category posts block that retrieves some posts from a specified category, then displays their titles and thumbnails horizontally or vertically.
+The demo block is a straightforward category posts block that retrieves some posts from a specified category, then displays their titles and thumbnails horizontally or vertically.
 
 **Sample Block Admin**
 
-<img alt="Screen grab of Block admin view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdte3fw466607u1tz9pha4n" width="400">
+<img alt="Screen grab of Block admin view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdte3fw466607u1tz9pha4n" width="360">
 
 **Sample Block Front-End**
 
-<img alt="Screen grab of Block front end view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdubwhh4of807u9cbwnsf35" width="400">
+<img alt="Screen grab of Block front end view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdubwhh4of807u9cbwnsf35" width="360">
 
 ## Installation Instructions
 
-- Download this repo as a .ZIP file and install it as a plugin on any site running **WordPress 7.0 or newer**.
+- Download this repo as a `.zip` file and install it as a plugin on any site running **WordPress 7.0 or newer**.
 
 - Activate the plugin *WP7 PHP Block Demo*.
 
