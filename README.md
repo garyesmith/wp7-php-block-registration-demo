@@ -48,14 +48,14 @@ The block code is contained in the subfolder `simple-block-demo` which contains 
 
 - `view.js` - JaveScript that runs on the front-end after the DOM and blocks have loaded, and then injects a button that enables the display direction of the posts in the block to be changed on-the-fly with a simple JavaScript sort. **Important note:** This JavaScript will only execute when the block is viewed on the front-end of the website; it will not execute within the WordPress admin panel content editing area.
 
-Inline code comments provide further details.
+Inline code comments provide further implementation details.
 
 
 ## What is PHP-Only Block Registration?
 
 Until the release of WordPress 7.0 in early 2026, the creation of all custom WordPress blocks (formerly known as Gutenberg blocks) required working with a Javascript build environment that includes NodeJS, npm, React, and other related build tools. Since the rest of WordPress is built and customized via PHP, this made custom block development cumbersome, bringing along a lot of overhead even for developers who work in both stacks.
 
-[PHP-Only Block Registration](https://make.wordpress.org/core/2026/03/03/php-only-block-registration/) in WordPress 7.0 eliminates the need for this secondary stack when creating simple server-rendered blocks (see below). Specifically, a new `autoRegister` flag in `register_block_type` instructs WordPress to automatically generates the block in the editor, along with the relevant sidebar options.
+[PHP-Only Block Registration](https://make.wordpress.org/core/2026/03/03/php-only-block-registration/) in WordPress 7.0 eliminates the need for this secondary stack when creating simple server-rendered blocks (see below). Specifically, a new `autoRegister` flag in `register_block_type` instructs WordPress to automatically activate the block in the editor, along with the relevant sidebar setting elements.
 
 ## Limitations of PHP-Only Block Registration
 
