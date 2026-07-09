@@ -53,9 +53,9 @@ Inline code comments provide further details.
 
 ## What is PHP-Only Block Registration?
 
-Until the release of WordPress 7.0 in early 2026, the creation of all custom WordPress blocks (formerly known as Gutenberg blocks) required working with a Javascript build environment that including NodeJS, npm, React, and other related build tools. Since the rest of WordPress is built and customized via PHP, this made custom block development cumbersome, bringing along a lot of overhead even for developers who work in both stacks.
+Until the release of WordPress 7.0 in early 2026, the creation of all custom WordPress blocks (formerly known as Gutenberg blocks) required working with a Javascript build environment that includes NodeJS, npm, React, and other related build tools. Since the rest of WordPress is built and customized via PHP, this made custom block development cumbersome, bringing along a lot of overhead even for developers who work in both stacks.
 
-[PHP-Only Block Registration](https://make.wordpress.org/core/2026/03/03/php-only-block-registration/) in WordPress 7.0 eliminates the need for this secondary stack when creating simple server-rendered blocks. Specifically, a new `autoRegister` flag in `register_block_type` instructs WordPress to automatically generates the block in the editor, along with the relevant sidebar options.
+[PHP-Only Block Registration](https://make.wordpress.org/core/2026/03/03/php-only-block-registration/) in WordPress 7.0 eliminates the need for this secondary stack when creating simple server-rendered blocks (see below). Specifically, a new `autoRegister` flag in `register_block_type` instructs WordPress to automatically generates the block in the editor, along with the relevant sidebar options.
 
 ## Limitations of PHP-Only Block Registration
 
@@ -69,4 +69,4 @@ This method is designed to ease block registration for simpler blocks that do no
 
 - Extensive user interaction with a lot of JavaScript that must execute in the WordPress admin area.
 
-Even with these limitatations, this new functionality should open up new customization possibilities for more WordPress developers.
+Even with these limitatations, this change should open up new customization possibilities for more WordPress developers.
