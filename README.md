@@ -6,11 +6,11 @@ The demo is a simple category posts block that retrieves some posts from a speci
 
 **Sample Block Admin**
 
-<img alt="Screen grab of Block admin view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdq4jr62azl07u1udf7n81a?1" width="500">
+<img alt="Screen grab of Block admin view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdte3fw466607u1tz9pha4n" width="500">
 
 **Sample Block Front-End**
 
-<img alt="Screen grab of Block front end view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdq4jvx2azs07u106a159cd?1" width="500">
+<img alt="Screen grab of Block front end view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdubwhh4of807u9cbwnsf35" width="500">
 
 ## Installation Instructions
 
