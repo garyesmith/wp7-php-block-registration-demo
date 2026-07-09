@@ -50,6 +50,8 @@ The block code is contained in the subfolder `simple-block-demo` which contains 
 
 Inline code comments provide further implementation details.
 
+Note that any number of blocks could be registered within one plugin, with each contained in its own subfolder.
+
 
 ## What is PHP-Only Block Registration?
 
