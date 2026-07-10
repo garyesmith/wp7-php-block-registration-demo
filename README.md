@@ -6,11 +6,11 @@ The demo block is a straightforward category posts block that retrieves some pos
 
 **Sample Block Admin**
 
-<img alt="Screen grab of Block admin view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdte3fw466607u1tz9pha4n" width="360">
+<img alt="Screen grab of Block admin view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrfgnguy1spx07u96ce6xdbv" width="360">
 
 **Sample Block Front-End**
 
-<img alt="Screen grab of Block front end view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrdubwhh4of807u9cbwnsf35" width="360">
+<img alt="Screen grab of Block front end view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrfgo40x1t6507u9x9z1qd58" width="360">
 
 ## Installation Instructions
 
