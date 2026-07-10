@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;  // prevent direct access via browser
 add_action(
 	'init',
 	function () {
-		
+
 		// register js for the block
 		wp_register_script(
 			'simple-block-demo-view',
@@ -26,7 +26,7 @@ add_action(
 		wp_register_style(
 			'simple-block-demo-style',
 			PHPBLOCKS_URL . 'simple-block-demo/style.css',
-			array(),
+			array( 'dashicons' ),
 			PHPBLOCKS_VERSION
 		);
 
@@ -105,6 +105,7 @@ add_action(
 					'html'         => false, // set to true if you want people to be able to edit your block HTML inside WP
 				),
 				'render_callback' => function ( $attributes ) {
+
 					wp_enqueue_script('simple-block-demo-view');
 
 					// get the ID of the category selected in the sidebar
@@ -125,8 +126,12 @@ add_action(
 						$catListHtml .= sprintf(
 							'<li>
 								<a href="%s">
-									%s
-									<h4>%s</h4>
+									<div class="image-container">
+										%s
+									</div>
+									<div class="heading-container">
+										<h4>%s</h4>
+									</div>
 								</a>
 							</li>',
 							get_the_permalink(),
@@ -141,19 +146,19 @@ add_action(
 					// generate the required classes and inline styles for a block's root element 
 					$block_wrapper = get_block_wrapper_attributes(
 						array(
-							'class' => 'demoblock-simple',
+							'class' => 'simple-block-demo relative',
 						)
 					);
 
 					// return all HTML for the block, including the list elements created above
 					return sprintf(
 						'<div %s>
-							<h2 class="demoblock-simple__heading">%s</h2>
-							<ul class="demoblock-simple__category %s">%s</ul>
+							<h2>%s</h2>
+							<ul class="%s">%s</ul>
 						</div>',
 						$block_wrapper,
 						esc_html( $attributes['heading'] ),
-						$attributes['direction'],
+						esc_html( $attributes['direction']),
 						wp_kses_post($catListHtml) 
 					);
 				},

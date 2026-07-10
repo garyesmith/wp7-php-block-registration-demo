@@ -1,50 +1,80 @@
-/* styles for front end of the block */
-.demoblock-simple {
-	padding: 10px 0 0 0;
+/* Block styles */
+.simple-block-demo {
+	padding: 2% 0 0 0;
 	position: relative;
 }
-.demoblock-simple__heading {
-	color: inherit;
-	margin: 1% 0 0 1%;
+.simple-block-demo h2 {
+	font-weight: bold;
+	margin-bottom: 2%;
+	margin-top: 0;
+	padding-top: 0;
+	position: relative;
 }
-.demoblock-simple__category {
-	color: inherit;
-	list-style-type: none;
-	float: none;
-	clear: both;
+.simple-block-demo ul {
 	width: 100%;
 	padding: 0;
-	margin: 0;
-	display: flow-root;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); 
+	gap: 2rem;
 }
-.demoblock-simple__category button {
-	position: absolute;
-	top: 10%;
-	right: 5%;
-	cursor: pointer;
-	border: 4px solid lightskyblue;
-	background-color: lightskyblue;
-	border-radius: 5px;
+.simple-block-demo ul.vertical {
+	grid-template-columns: repeat(1, 0.3fr);
 }
-.demoblock-simple__category li {
-	width: 30%;
-	float: left;
-	margin: 1.2% 2% 1% 0;
-	display: block;
-	text-align: center;
-	padding: 5px 0 0 0;
-	border: 1px solid black;
+.simple-block-demo li {
+	list-style-type: none;
+	padding: 10px 0;
+	user-select: none;
+	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 	border-radius: 16px;
-	cursor: pointer;
+	text-align: center;
 }
-.demoblock-simple__category.vertical li {
-	float: none;
-	clear: both;
-	margin-top: 1.1%;
+.simple-block-demo li:hover {
+	box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+	translate: 0 -0.25rem;
 }
-.demoblock-simple__category li img {
-	width: auto;
-	height: 5vw;
-	margin: 0 auto;
+.simple-block-demo li a h4 {
+	font-size: 1.4rem;
+	margin-top: 0;
+}
+.simple-block-demo li a {
 	display: block;
+	box-shadow: var(--shadow-md);
+	overflow: hidden;
+	transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+	transition-timing-function: var(--default-transition-timing-function); 
+	transition-duration: 0.3s;
+	text-decoration: none;
+}
+.simple-block-demo li a:hover {
+	text-decoration: none;
+}
+.simple-block-demo li a .image-container {
+	width: 75%;
+	padding: 0;
+	margin: auto;
+	aspect-ratio: 1 / 1;
+}
+.simple-block-demo li a .image-container img {
+	width: 75%;
+	height: auto;
+	margin: auto;
+	padding: 0;
+}
+.simple-block-demo li a .heading-container {
+	padding-inline: calc(var(--spacing) * 5);
+	padding-top: 0;
+	text-align: center;
+}
+.simple-block-demo h2 span.reverse-direction {
+	display: inline-block;
+	position: relative;
+	color: oklch(70.7% 0.165 254.624);
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+	margin-left: 5px;
+	margin-top: 5px;
+	float: none;
+	cursor: pointer;
+	z-index: 100;
 }

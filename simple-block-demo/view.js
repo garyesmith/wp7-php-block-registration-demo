@@ -4,27 +4,37 @@
 document.addEventListener( 'DOMContentLoaded', () => {
 
     // retrieve pointer to all instances of the custom block
-    const allLists = document.querySelectorAll( '.demoblock-simple__category' );
+    const allDemoBlocks = document.querySelectorAll( '.simple-block-demo' );
 
     // if there do not seem to be any block instances, do nothing further
-	if ( ! allLists.length ) {
+	if ( ! allDemoBlocks.length ) {
 		return;
     }
 
     // loop through each instance of the block on the page
-    allLists.forEach( ( list ) => {
+    allDemoBlocks.forEach( ( block ) => {
 
-        // inject a button element into the block
-        const reverseButton = document.createElement('button');
-        reverseButton.textContent = 'Reverse Order';
-        reverseButton.type = 'button';
-        list.appendChild(reverseButton);
+        // inject a reverse icon element into the block heading
+        const reverseIcon = document.createElement('span');
+        reverseIcon.classList = 'reverse-direction dashicons dashicons-controls-repeat';
+        reverseIcon.tabIndex = 0; 
+        reverseIcon.role = "button";
+        reverseIcon.ariaLabel="Reverse List order";
+        block.querySelector('h2').appendChild(reverseIcon);
 
-        // add a click handler to the button that reverses the list items within
-        reverseButton.addEventListener( 'click', () => {
-            Array.from(list.children).reverse().forEach(li => list.appendChild(li));
+        // add a click handler to the icon that reverses the block items within
+        reverseIcon.addEventListener( 'click', () => {
+            var blockList=block.querySelector('ul');
+            Array.from(blockList.children).reverse().forEach(li => blockList.appendChild(li));
         });
 
+        // also add an accessible keyboard event handler so space or enter trigger a click
+        reverseIcon.addEventListener( 'keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                reverseIcon.click();
+            }
+        });
     });
 
 });
