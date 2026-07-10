@@ -15,6 +15,8 @@ The demo block is a straightforward category posts block that retrieves some pos
 
 ## Installation Instructions
 
+- Download this repo as a `.zip` file and install it as a plugin on any site running **WordPress 7.0 or newer**.
+
 - Activate the plugin *WP7 PHP Block Demo*.
 
 - Publish some posts and assign them to some categories; make sure each post has a featured image.
