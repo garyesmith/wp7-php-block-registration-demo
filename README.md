@@ -4,7 +4,6 @@ This plugin demonstrates a simple example of *PHP-Only Block Registration* to cr
 
 The demo block is a straightforward category posts block that retrieves some posts from a specified category, then displays their titles and thumbnails horizontally or vertically.
 
-Try it out in the [Interactive Playground](https://playground.wordpress.net/?blueprint-url=data:application/json,%7B%22%24schema%22%3A%22https%3A%2F%2Fplayground.wordpress.net%2Fblueprint-schema.json%22%2C%22preferredVersions%22%3A%7B%22php%22%3A%228.2%22%2C%22wp%22%3A%22latest%22%7D%2C%22steps%22%3A%5B%7B%22step%22%3A%22installPlugin%22%2C%22pluginData%22%3A%7B%22resource%22%3A%22git%3Adirectory%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fgaryesmith%2Fwp7-php-block-registration-demo.git%22%2C%22ref%22%3A%22preview-branch%22%2C%22path%22%3A%22%2F%22%7D%2C%22options%22%3A%7B%22activate%22%3Atrue%7D%7D%5D%7D)
 
 **Sample Block Admin**
 
@@ -16,7 +15,7 @@ Try it out in the [Interactive Playground](https://playground.wordpress.net/?blu
 
 ## Installation Instructions
 
-- Download this repo as a `.zip` file and install it as a plugin on any site running **WordPress 7.0 or newer**.
+- Download this repo as a `.zip` file and install it as a plugin on any site running **WordPress 7.0 or newer**. (or visit the [Interactive Playground](https://playground.wordpress.net/?blueprint-url=data:application/json,%7B%22%24schema%22%3A%22https%3A%2F%2Fplayground.wordpress.net%2Fblueprint-schema.json%22%2C%22preferredVersions%22%3A%7B%22php%22%3A%228.2%22%2C%22wp%22%3A%22latest%22%7D%2C%22steps%22%3A%5B%7B%22step%22%3A%22installPlugin%22%2C%22pluginData%22%3A%7B%22resource%22%3A%22git%3Adirectory%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fgaryesmith%2Fwp7-php-block-registration-demo.git%22%2C%22ref%22%3A%22preview-branch%22%2C%22path%22%3A%22%2F%22%7D%2C%22options%22%3A%7B%22activate%22%3Atrue%7D%7D%5D%7D) for a clean WordPress 7.0 site with this plugin already installed.)
 
 - Activate the plugin *WP7 PHP Block Demo*.
 
