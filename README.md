@@ -1,6 +1,6 @@
 #  WordPress 7 PHP-Only Block Registration Demo
  
-This plugin demonstrates a simple example of *PHP-Only Block Registration* to create a WordPress block that can be customized via settings in the WP admin sidebar. This ability to do this purely with PHP has been available only as of WordPress v7.0. The code here is modified and extended from examples provided by [Brian Coords](https://github.com/bacoords/example-php-block).
+This plugin demonstrates a simple example of *PHP-Only Block Registration* to create a WordPress block that can be customized via settings in the WP admin sidebar. This ability to do this purely with PHP has been available only as of WordPress v7.0. The code here is modified and extended from examples provided by [Brian Coords](https://github.com/bacoords/example-php-block). This [post by Ciprian Popescu](https://getbutterfly.com/php-only-block-registration-in-wordpress/) is another excellent resource.
 
 The demo block is a straightforward category posts block that retrieves some posts from a specified category, then displays their titles and thumbnails horizontally or vertically.
 
