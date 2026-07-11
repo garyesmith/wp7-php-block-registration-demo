@@ -4,6 +4,7 @@ This plugin demonstrates a simple example of *PHP-Only Block Registration* to cr
 
 The demo block is a straightforward category posts block that retrieves some posts from a specified category, then displays their titles and thumbnails horizontally or vertically.
 
+A live demo of the front-end interface for this block is available at (https://wpdemo.garysmith.ca)[https://wpdemo.garysmith.ca/].
 
 **Sample Block Admin**
 
