@@ -8,7 +8,7 @@ A live demo of the front-end interface for this block is available at [https://w
 
 **Sample Block Admin**
 
-<img alt="Screen grab of Block admin view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrfgnguy1spx07u96ce6xdbv" width="360">
+<img alt="Screen grab of Block admin view" src="https://ca-central-1.graphassets.com/ABnvGT5MLQxm59mwdzQhjz/cmrggugi0l1eg07u9cnfnp8yh" width="360">
 
 **Sample Block Front-End**
 
